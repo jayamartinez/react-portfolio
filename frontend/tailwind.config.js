@@ -7,11 +7,11 @@ export default {
         sans: ["Poppins", "sans-serif"],
       },
       colors: {
-        darkBg: "#18181c",
+        darkBg: "#121212",
         lightBg: "#f7f7f7",
 
         darkText: "#f7f7f7",
-        lightText: "#18181c",
+        lightText: "#121212",
       },
     },
   },
