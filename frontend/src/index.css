@@ -12,4 +12,3 @@ body {
 .dark body {
   @apply bg-darkBg text-darkText;
 }
-
