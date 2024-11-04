@@ -12,3 +12,27 @@ body {
 .dark body {
   @apply bg-darkBg text-darkText;
 }
+
+.card-wrapper {
+  @apply relative overflow-hidden rounded-md bg-neutral-900;
+}
+
+/* Gradient */
+.card-wrapper::before {
+  background: conic-gradient(
+    rgba(0, 166, 255, 0.8) 00deg,
+    rgba(0, 55, 255, 0.8) 60deg,
+    transparent 40deg
+    );
+    
+    @apply absolute left-[-80%] top-[-80%] h-[260%] w-[260%] opacity-0 transition-opacity duration-500 animate-border-spin content-[''];
+}
+
+.card-wrapper:hover::before {
+  @apply opacity-100 animate-border-spin;
+}
+
+/* Body */
+.card-content {
+  @apply absolute left-[1px] top-[1px] h-[calc(100%-2px)] w-[calc(100%-2px)] rounded-md bg-neutral-900 border border-gray-400/20;
+}

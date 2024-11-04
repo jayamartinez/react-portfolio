@@ -2,7 +2,7 @@ import React from 'react'
 
 const SkillCard = ({ name, description, icon, color }) => {
     return (
-        <div className='bg-neutral-900 border border-neutral-900 hover:bg-neutral-800 
+        <div className='bg-neutral-950 border border-neutral-900 hover:bg-neutral-900 
             hover:border-gray-400/20 transition-colors duration-200 rounded-lg p-3 w-56 flex 
             items-center space-x-4'>
 

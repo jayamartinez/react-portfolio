@@ -54,7 +54,7 @@ const FlashlightScroll = () => {
       {projects.map((project, index) => (
         <div
           key={index}
-          className={`project flex items-center py-8 transition-opacity duration-300 min-h-[50vh] ${
+          className={`project flex items-center py-8 min-h-[50vh] ${
             index === activeIndex ? 'opacity-100' : 'opacity-50'
           }`}
 

@@ -17,19 +17,32 @@ const HomePage = () => {
                     <p className='text-md'>📍 Queens, New York</p>
 
                     {/* Links */}
-                    <div className='flex py-2 space-x-4'>
-                   
-                        <a href="/" download className="flex items-center space-x-2">
-                            <FaFileDownload />
-                            <span>Resume</span>
-                        </a>
+                    <div className='flex py-2 space-x-2'>
+                        <div className='card-wrapper h-[40px] w-[100px]'>
+                            <a href="/" download 
+                            className="flex card-content items-center justify-center space-x-2 p-1">
+                                <FaFileDownload />
+                                <span>Resume</span>
+                            </a>
+                        </div>
 
-                        <a href="https://www.linkedin.com/in/jayamartinez" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
-                            <FaLinkedin />
-                            <span>LinkedIn</span>
-                        </a>
+                        <div className='flex space-x-2 '>
+                            <div className='relative h-[40px] w-[100px]'>
+                                <a href="https://www.linkedin.com/in/jayamartinez" 
+                                target="_blank" rel="noopener noreferrer" 
+                                className="flex rounded-md border border-gray-400/20 
+                                bg-neutral-900 items-center justify-center
+                                space-x-2 p-1 h-[40px] w-[100px]">
+                                    <FaLinkedin />
+                                    <span>LinkedIn</span>
+                                </a>
+                            </div>
+                        </div>
 
-                        <a href="https://github.com/jayamartinez" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
+                        <a href="https://github.com/jayamartinez" target="_blank" rel="noopener noreferrer" 
+                        className="flex rounded-md border border-gray-400/20 
+                        bg-neutral-900 items-center justify-center
+                        space-x-2 p-1 h-[40px] w-[100px]">
                             <FaGithub />
                             <span>GitHub</span>
                         </a>
@@ -39,24 +52,8 @@ const HomePage = () => {
 
                 <SkillsList />
 
-                <SkillsList />
-
-                <SkillsList />
-
-                <SkillsList />
-
-
                 <FlashlightScroll />
 
-                <SkillsList />
-
-                <SkillsList />
-
-                <SkillsList />
-
-                <SkillsList />
-
-                <SkillsList />
 
 
             </div>
