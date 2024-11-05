@@ -19,7 +19,7 @@ const SkillsList = () => {
 
             <h1 className="text-3xl font-bold mb-2">Skills</h1>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 flex-col items-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 flex-col justify-center items-center">
                 {skills.map((skill, index) => (
                     <SkillCard 
                     key={index} 

@@ -1,5 +1,3 @@
-import React, { useRef } from 'react'
-import { useState, useEffect } from 'react';
 import { Navbar, FlashlightScroll, SkillsList } from '../components'
 import { FaLinkedin, FaGithub, FaFileDownload } from 'react-icons/fa';
 
@@ -26,22 +24,17 @@ const HomePage = () => {
                             </a>
                         </div>
 
-                        <div className='flex space-x-2 '>
-                            <div className='relative h-[40px] w-[100px]'>
-                                <a href="https://www.linkedin.com/in/jayamartinez" 
-                                target="_blank" rel="noopener noreferrer" 
-                                className="flex rounded-md border border-gray-400/20 
-                                bg-neutral-900 items-center justify-center
-                                space-x-2 p-1 h-[40px] w-[100px]">
-                                    <FaLinkedin />
-                                    <span>LinkedIn</span>
-                                </a>
-                            </div>
-                        </div>
+                        <a href="https://www.linkedin.com/in/jayamartinez" target="_blank" rel="noopener noreferrer" 
+                        className="flex rounded-md border border-gray-400/20 
+                        bg-neutral-900 items-center justify-center transition-colors duration-300 hover:bg-neutral-800
+                        space-x-2 p-1 h-[40px] w-[100px]">
+                            <FaLinkedin />
+                            <span>LinkedIn</span>
+                        </a>
 
                         <a href="https://github.com/jayamartinez" target="_blank" rel="noopener noreferrer" 
                         className="flex rounded-md border border-gray-400/20 
-                        bg-neutral-900 items-center justify-center
+                        bg-neutral-900 items-center justify-center transition-colors duration-300 hover:bg-neutral-800
                         space-x-2 p-1 h-[40px] w-[100px]">
                             <FaGithub />
                             <span>GitHub</span>
@@ -51,8 +44,16 @@ const HomePage = () => {
                 </div>
 
                 <SkillsList />
+                
+                <div className="max-w-4xl mx-auto pt-20 text-left">
 
-                <FlashlightScroll />
+                    <h1 className="text-3xl font-bold mx-auto">Projects</h1>
+                    
+                    <FlashlightScroll />
+
+                </div>
+
+                
 
 
 
