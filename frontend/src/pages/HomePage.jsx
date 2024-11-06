@@ -63,18 +63,6 @@ const HomePage = () => {
             
                 </div>
 
-                <SkillsList />
-
-                <SkillsList />
-
-                <SkillsList />
-
-                <SkillsList />
-
-                <SkillsList />
-
-                
-
             </div>
             
         </>
