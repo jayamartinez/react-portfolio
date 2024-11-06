@@ -1,6 +1,9 @@
+import { useState } from "react";
 import SkillCard from "./SkillCard"
 
 const SkillsList = () => {
+
+    const [showAllSkills, setShowAllSkills] = useState(false);
     
     const skills = [
         { name: "JavaScript", description: "Coding Language", icon: "./JavaScript.png", color: "#ebda51" },
@@ -14,23 +17,25 @@ const SkillsList = () => {
     ];
 
   return (
-    <div className="flex items-start justify-center p-2">
-        <div className="max-w-4xl mx-auto text-left">
+    <div className="flex flex-col max-w-6xl items-center lg:items-start justify-center mx-auto text-left p-2">
 
-            <h1 className="text-3xl font-bold mb-2">Skills</h1>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 flex-col justify-center items-center">
-                {skills.map((skill, index) => (
-                    <SkillCard 
-                    key={index} 
-                    name={skill.name} 
-                    description={skill.description} 
-                    icon={skill.icon} 
-                    color={skill.color} />
-                ))}
-            </div>
-
+        <h1 className="text-2xl md:text-3xl text-left font-bold mb-2">Skills</h1>
+        
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 flex-col justify-center items-center'>
+            {skills.map((skill, index) => (
+                <SkillCard 
+                key={index} 
+                name={skill.name} 
+                description={skill.description} 
+                icon={skill.icon} 
+                color={skill.color} />
+            ))}
         </div>
+        
+        <button onClick={() => setShowAllSkills(!showAllSkills)} className="sm:hidden text-sm text-blue-500">
+            {showAllSkills ? "Show Less" : "Show More"}
+        </button>
+
     </div>
   )
 }

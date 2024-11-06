@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { FaFolder, FaFolderOpen } from 'react-icons/fa';
+import { FaFolderOpen } from 'react-icons/fa';
 import { GoDotFill } from 'react-icons/go';
+import { IconContext } from 'react-icons/lib';
 
 const projects = [
   {
@@ -17,9 +18,9 @@ const projects = [
   },
   {
     title: 'YouTube Transcript & TTS Automation',
-    description: `• Automated YouTube transcript downloads with the YouTube Data API.
+    description: `• Automated YouTube transcript downloads with the \nYouTube Data API.
                   • Integrated Eleven Labs AI TTS for audio conversion.
-                  • Streamlined workflow for scalable audio content creation.
+                  • Streamlined workflow for scalable audio content \ncreation.
                   `,
     link: 'https://www.google.com',
     image: 'https://via.placeholder.com/1920x1080',
@@ -47,7 +48,7 @@ const FlashlightScroll = () => {
       const elementTop = element.offsetTop;
       const elementHeight = element.offsetHeight;
 
-      if (scrollPosition >= elementTop - viewportHeight * 0.3) {
+      if (scrollPosition >= elementTop - viewportHeight * 0.55) {
         newIndex = index;
       }
     });
@@ -62,46 +63,105 @@ const FlashlightScroll = () => {
   }, []);
 
   return (
-    <div className="max-w-6xl mx-auto">
-      {projects.map((project, index) => (
-        <div
-          key={index}
-          className={`project flex items-start py-16 min-h-[40vh] transition-opacity duration-300 ${
-            index === activeIndex ? 'opacity-100' : 'opacity-50'
-          }`}
-        >
-          <div className="w-1/2 p-8">
-            <h2 className="text-3xl font-bold">{project.title}</h2>
-            <p className='mt-2 whitespace-pre-line'>{project.description}</p>
-          </div>
-          <div className='h-full w-1/2 p-4 flex flex-col justify-between border bg-neutral-800 border-gray-400/20 rounded-lg'>
-            <div className="w-full h-full object-cover p-2 max-w-full">
-              <img src={project.image} alt={project.title} className='w-full h-full object-contain rounded-md'/>
+    <div className="max-w-6xl mx-auto flex flex-col lg:flex-row justify-center">
+      <div>
+        {projects.map((project, index) => (
+          <div
+            key={index}
+            className={`project flex flex-col items-start py-16 min-h-[40vh] transition-opacity duration-300 ${
+              index === activeIndex ? 'opacity-100' : 'opacity-50'
+            }`}
+          >
+            <div className="w-full p-8">
+              <h2 className="text-xl md:text-3xl font-bold">{project.title}</h2>
+              <p className='mt-2 whitespace-pre-line'>{project.description}</p>
             </div>
 
-            <div className='flex flex-row space-x-2 p-2'>
+            <div className='h-3/4 w-3/4 p-2 flex flex-col 
+            justify-center mx-auto border bg-neutral-800 
+            border-gray-400/20 rounded-lg lg:hidden
+            hover:cursor-pointer transition-transform duration-300 hover:scale-105'>
 
-              <div className='card-wrapper h-[40px] w-[100px]'>
-                <a href={project.link} target="_blank" rel="noopener noreferrer"
-                className="flex card-content items-center justify-center space-x-1 p-1">
-                    <GoDotFill />
-                    <span>Live</span>
-                </a>
+              <div className=''>
+                <div className="w-full h-full object-cover p-2 max-w-full">
+                  <img src={project.image} alt={project.title} className='w-full h-full object-contain rounded-md'/>
+                </div>
+
+                <div className='flex flex-row space-x-2 p-2'>
+
+                  <div className='card-wrapper h-[40px] w-[100px]'>
+                    <a href={project.link} target="_blank" rel="noopener noreferrer"
+                    className="flex card-content items-center justify-center space-x-1 p-1">
+                        <GoDotFill className='animate-pulse'/>
+                        <span>Live</span>
+                    </a>
+                  </div>
+
+                  <div className='card-wrapper h-[40px] w-[100px]'>
+                    <a href={project.source} target="_blank" rel="noopener noreferrer"
+                    className="flex card-content items-center justify-center space-x-1 p-1">
+                        <FaFolderOpen />
+                        <span>Source</span>
+                    </a>
+                  </div>
+
+                </div>
               </div>
+        
 
-              <div className='card-wrapper h-[40px] w-[100px]'>
-                <a href={project.source} target="_blank" rel="noopener noreferrer"
-                className="flex card-content items-center justify-center space-x-1 p-1">
-                    <FaFolderOpen />
-                    <span>Source</span>
-                </a>
-              </div>
+            </div>
+            
+          </div>
+        ))}
+      </div>
 
+    <div className='h-full w-1/2 p-2 hidden lg:flex flex-col 
+    justify-center mx-auto border bg-neutral-800 
+    border-gray-400/20 rounded-lg sticky top-[25%]
+    hover:cursor-pointer transition-transform duration-300 hover:scale-105'>
+
+        <div className=''>
+          <div className="w-full h-full object-cover p-2 max-w-full">
+            <img src={projects[activeIndex].image} alt={projects[activeIndex].title} className='w-full h-full object-contain rounded-md'/>
+          </div>
+
+          <div className='flex flex-row space-x-2 p-2'>
+
+            <div className='card-wrapper h-[40px] w-[100px]'>
+              <a href={projects[activeIndex].link} target="_blank" rel="noopener noreferrer"
+              className="flex card-content items-center justify-center space-x-1 p-1">
+                  <GoDotFill className='text-red-600 animate-pulse' />
+                  <span>Live</span>
+              </a>
+            </div>
+
+            <div className='card-wrapper h-[40px] w-[100px]'>
+              <a href={projects[activeIndex].source} target="_blank" rel="noopener noreferrer"
+              className="flex card-content items-center justify-center space-x-1 p-1">
+                  <FaFolderOpen />
+                  <span>Source</span>
+              </a>
             </div>
 
           </div>
         </div>
-      ))}
+        
+
+    </div>
+
+      {/* <div className='relative w-1/2 p-2 flex flex-col justify-center mx-auto'>
+        {projects.map((project, index) => (
+          <img
+            key={index}
+            src={project.image}
+            alt={project.title}
+            className={`absolute top-0 left-0 w-full h-full object-contain rounded-md transition-opacity duration-300 ${
+              index === activeIndex ? 'block' : 'hidden'
+            }`}
+          />
+        ))}
+      </div> */}
+
     </div>
   );
 };

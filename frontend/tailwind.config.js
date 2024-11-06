@@ -1,3 +1,5 @@
+import { transform } from 'framer-motion';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
@@ -19,9 +21,14 @@ export default {
             transform: "rotate(-360deg)",
           },
         },
+        "pulse": { 
+          '0%, 100%': { transform: 'scale(1)', opacity: 1 },
+          '50%': { transform: 'scale(1.1)', opacity: 0.5 },
+        },
       },
       animation: {
         "border-spin": "border-spin 2s linear infinite",
+        "pulse": "pulse 1.5s ease-in-out infinite",
       }
     },
   },

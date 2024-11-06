@@ -6,16 +6,19 @@ const HomePage = () => {
     return (
         <>
             <Navbar />
-            <div>
-                <div className='flex flex-col 
-                sm:py-20 md:py-20 lg:py-40 lg:pt-20 
-                mx-auto h-full max-w-4xl justify-between'>
-                    <h1 className='font-bold text-5xl py-2'>Jay Martinez</h1>
+            <div className='!scroll-smooth'>
+
+                <div className='flex flex-col items-center md:items-start
+                sm:py-20 sm:pt-20 lg:py-40 lg:pt-20 
+                mx-auto h-full max-w-sm lg:max-w-6xl justify-between'>
+
+                    <h1 className='font-bold text-3xl md:text-5xl pt-20 md:py-2'>Jay Martinez</h1>
                     <p className='text-lg py-2'>Full Stack Developer</p>
                     <p className='text-md'>📍 Queens, New York</p>
 
                     {/* Links */}
-                    <div className='flex py-2 space-x-2'>
+                    <div className='flex my-4 py-2 space-x-2'>
+
                         <div className='card-wrapper h-[40px] w-[100px]'>
                             <a href="/" download 
                             className="flex card-content items-center justify-center space-x-2 p-1">
@@ -41,21 +44,18 @@ const HomePage = () => {
                         </a>
 
                     </div>
+
                 </div>
 
                 <SkillsList />
                 
-                <div className="max-w-4xl mx-auto pt-20 text-left">
+                <div className="max-w-sm md:max-w-3xl lg:max-w-6xl mx-auto mt-32 text-left">
 
-                    <h1 className="text-3xl font-bold mx-auto">Projects</h1>
+                    <h1 className="text-2xl md:text-3xl text-center lg:text-left font-bold mx-auto">Projects</h1>
                     
                     <FlashlightScroll />
-
+            
                 </div>
-
-                
-
-
 
             </div>
         </>
