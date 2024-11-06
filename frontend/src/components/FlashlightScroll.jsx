@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaFolderOpen } from 'react-icons/fa';
 import { GoDotFill } from 'react-icons/go';
-import { IconContext } from 'react-icons/lib';
 
 const projects = [
   {

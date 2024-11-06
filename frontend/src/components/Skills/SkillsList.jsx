@@ -17,9 +17,9 @@ const SkillsList = () => {
     ];
 
   return (
-    <div className="flex flex-col max-w-6xl items-center lg:items-start justify-center mx-auto text-left p-2">
+    <div className="flex flex-col max-w-6xl items-center justify-center mx-auto text-left p-2">
 
-        <h1 className="text-2xl md:text-3xl text-left font-bold mb-2">Skills</h1>
+        <h1 className="text-2xl md:text-3xl text-left self-start font-bold mb-2">Skills</h1>
         
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 flex-col justify-center items-center'>
             {skills.map((skill, index) => (
