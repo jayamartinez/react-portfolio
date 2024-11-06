@@ -18,10 +18,17 @@ const SkillsList = () => {
 
   return (
     <div className="flex flex-col max-w-6xl items-center justify-center mx-auto text-left p-2">
-
+{/* 
         <h1 className="text-2xl md:text-3xl text-left self-start font-bold mb-2">Skills</h1>
+        <p className="self-start border bg-neutral-800 text-neutral-200
+        border-gray-400/20 mb-1 w-fit rounded-md px-1.5 py-1 text-xs">Skills</p> */}
+        <p className="mb-2 w-fit self-start right-10 rounded-md 
+        border-[0.5px] border-gray-400/20 bg-neutral-800 px-1.5 
+        py-1 text-[#9A9A9A] text-xs">
+            Technologies
+        </p>
         
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 flex-col justify-center items-center'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 gap-x-10 flex-col '>
             {skills.map((skill, index) => (
                 <SkillCard 
                 key={index} 

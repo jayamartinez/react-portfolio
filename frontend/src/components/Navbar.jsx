@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <>
     <div className='fixed top-0 left-0 w-full z-50 flex justify-center items-center mt-2'>
-      <div className='border backdrop-blur-md bg-neutral-900/20 border-gray-400/20 rounded-xl p-3 space-x-8 flex flex-row'>
+      <div className='border backdrop-blur-md bg-neutral-900/20 border-gray-400/20 rounded-2xl p-3 space-x-8 flex flex-row'>
         <a href="/" className="flex items-center space-x-2 hover:scale-105 transition-transform duration-200">
           <FaHome />
           <span className='hidden md:block'>Home</span>

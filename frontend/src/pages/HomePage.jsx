@@ -5,8 +5,9 @@ const HomePage = () => {
 
     return (
         <>
+            
             <Navbar />
-            <div className='!scroll-smooth'>
+            <div>
 
                 <div className='flex flex-col items-center md:items-start
                 sm:py-20 sm:pt-20 lg:py-40 lg:pt-20 
@@ -21,7 +22,7 @@ const HomePage = () => {
 
                         <div className='card-wrapper h-[40px] w-[100px]'>
                             <a href="/" download 
-                            className="flex card-content items-center justify-center space-x-2 p-1">
+                            className="flex card-content items-center justify-center space-x-2 p-1 h-[40px] w-[100px]">
                                 <FaFileDownload />
                                 <span>Resume</span>
                             </a>
@@ -49,15 +50,33 @@ const HomePage = () => {
 
                 <SkillsList />
                 
-                <div className="max-w-sm md:max-w-3xl lg:max-w-6xl mx-auto mt-32 text-left">
+                <div className="max-w-sm md:max-w-3xl lg:max-w-6xl mx-auto mt-52 text-left">
 
-                    <h1 className="text-2xl md:text-3xl text-center lg:text-left font-bold mx-auto">Projects</h1>
+                    <h1 className="text-2xl md:text-3xl text-center font-bold mx-auto mb-5">Projects</h1>
+                    {/* <p className="mb-2 w-fit self-start right-10 rounded-md 
+                    border-[0.5px] border-gray-400/20 bg-neutral-800 px-1.5 
+                    py-1 text-[#9A9A9A] text-xs">
+                        Projects
+                    </p> */}
                     
                     <FlashlightScroll />
             
                 </div>
 
+                <SkillsList />
+
+                <SkillsList />
+
+                <SkillsList />
+
+                <SkillsList />
+
+                <SkillsList />
+
+                
+
             </div>
+            
         </>
 
     )

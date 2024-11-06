@@ -3,6 +3,7 @@ import { HomePage } from "./pages"
 import './index.css'
 import { ReactLenis } from 'lenis/dist/lenis-react';
 
+
 function App() {
 
   return (

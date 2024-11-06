@@ -114,14 +114,15 @@ const FlashlightScroll = () => {
         ))}
       </div>
 
+    {/* Scroll Preview */}
     <div className='h-full w-1/2 p-2 hidden lg:flex flex-col 
     justify-center mx-auto border bg-neutral-800 
     border-gray-400/20 rounded-lg sticky top-[25%]
     hover:cursor-pointer transition-transform duration-300 hover:scale-105'>
 
         <div className=''>
-          <div className="w-full h-full object-cover p-2 max-w-full">
-            <img src={projects[activeIndex].image} alt={projects[activeIndex].title} className='w-full h-full object-contain rounded-md'/>
+          <div className="w-full h-72 object-cover rounded-md p-2 max-w-full">
+            <img src={projects[activeIndex].image} alt={projects[activeIndex].title} className='w-full h-full object-cover rounded-md'/>
           </div>
 
           <div className='flex flex-row space-x-2 p-2'>
