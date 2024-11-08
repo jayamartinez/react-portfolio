@@ -1,6 +1,7 @@
 import { Navbar, FlashlightScroll, SkillsList } from '../components'
 import { FaLinkedin, FaGithub, FaFileDownload,  } from 'react-icons/fa';
 import { FaArrowRightLong } from 'react-icons/fa6';
+import TestComponent from '../components/TestComponent.jsx';
 
 const HomePage = () => {
 
@@ -9,6 +10,8 @@ const HomePage = () => {
             {/* test */}
             <Navbar />
             <div>
+
+                <TestComponent />
 
                 <div className='flex flex-col items-center md:items-start
                 sm:py-20 sm:pt-20 lg:py-40 lg:pt-20 
