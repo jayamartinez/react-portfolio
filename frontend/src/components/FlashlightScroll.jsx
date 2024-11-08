@@ -10,7 +10,7 @@ const projects = [
                   • First time working with MongoDB and Express.
                   • Learned how to integrate third-party APIs 
                     better.`,
-
+    technologies: ['React', 'NodeJS', 'Express', 'MongoDB'],
     link: 'https://netflix-clone-zoft.onrender.com/',
     image: './netflix-clone.gif',
     source: 'https://github.com/jayamartinez/netflix-clone'
@@ -21,6 +21,7 @@ const projects = [
                   • Integrated Eleven Labs AI TTS for audio conversion.
                   • Streamlined workflow for scalable audio content \ncreation.
                   `,
+    technologies: ['Python', 'Eleven Labs AI API'],
     link: 'https://www.google.com',
     image: 'https://via.placeholder.com/1920x1080',
     source: 'https://www.google.com'
@@ -28,6 +29,7 @@ const projects = [
   {
     title: 'Project Three',
     description: `Description for project three.\nYet another line.`,
+    technologies: ['Tech 1', 'Tech 2', 'Tech 3'],
     link: 'https://www.google.com',
     image: 'https://via.placeholder.com/1920x1080',
     source: 'https://www.google.com'
@@ -67,7 +69,7 @@ const FlashlightScroll = () => {
         {projects.map((project, index) => (
           <div
             key={index}
-            className={`project flex flex-col items-start py-16 min-h-[40vh] transition-opacity duration-300 ${
+            className={`project flex flex-col items-start pt-16 min-h-[40vh] transition-opacity duration-300 ${
               index === activeIndex ? 'opacity-100' : 'opacity-50'
             }`}
           >
@@ -76,6 +78,16 @@ const FlashlightScroll = () => {
               <p className='mt-2 whitespace-pre-line'>{project.description}</p>
             </div>
 
+            <div className='flex flex-row space-x-2 p-8'>
+              {project.technologies.map((tech, index) => (
+                <p key={index} className="mb-2 w-fit lg:self-start right-10 rounded-md 
+                border-[0.5px] border-gray-400/20 bg-neutral-800 px-1.5 
+                py-1 text-[#9A9A9A] text-xs">
+                    {tech}    
+                </p>
+              ))}
+
+            </div>
             <div className='h-3/4 w-3/4 p-2 flex flex-col 
             justify-center mx-auto border bg-neutral-800 
             border-gray-400/20 rounded-lg lg:hidden

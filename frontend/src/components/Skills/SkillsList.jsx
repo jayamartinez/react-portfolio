@@ -22,7 +22,7 @@ const SkillsList = () => {
         <h1 className="text-2xl md:text-3xl text-left self-start font-bold mb-2">Skills</h1>
         <p className="self-start border bg-neutral-800 text-neutral-200
         border-gray-400/20 mb-1 w-fit rounded-md px-1.5 py-1 text-xs">Skills</p> */}
-        <p className="mb-2 w-fit self-start right-10 rounded-md 
+        <p className="mb-2 w-fit lg:self-start right-10 rounded-md 
         border-[0.5px] border-gray-400/20 bg-neutral-800 px-1.5 
         py-1 text-[#9A9A9A] text-xs">
             Technologies

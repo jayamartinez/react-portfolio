@@ -5,7 +5,7 @@ import { CiMenuBurger } from "react-icons/ci";
 const Navbar = () => {
   return (
     <>
-    <div className='fixed top-0 left-0 w-full z-50 flex justify-center items-center mt-2'>
+    <div className='fixed top-0 left-0 w-full z-50 flex justify-center items-center mt-2 transition-transform duration-300 hover:scale-[1.03]'>
       <div className='border backdrop-blur-md bg-neutral-900/20 border-gray-400/20 rounded-2xl p-3 space-x-8 flex flex-row'>
         <a href="/" className="flex items-center space-x-2 hover:scale-105 transition-transform duration-200">
           <FaHome />
