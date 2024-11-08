@@ -1,20 +1,21 @@
-import { Navbar, FlashlightScroll, SkillsList } from '../components'
+import { FlashlightScroll, SkillsList } from '../components'
 import { FaLinkedin, FaGithub, FaFileDownload,  } from 'react-icons/fa';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import TestComponent from '../components/TestComponent.jsx';
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
 
     return (
         <>
             {/* test */}
-            <Navbar />
+            
             <div>
 
-                <TestComponent />
+                {/* <TestComponent /> */}
 
                 <div className='flex flex-col items-center md:items-start
-                sm:py-20 sm:pt-20 lg:py-40 lg:pt-20 
+                sm:py-10 sm:pt-10 lg:py-20 lg:pt-10 
                 mx-auto h-full max-w-sm lg:max-w-6xl justify-between'>
 
                     <h1 className='font-bold text-3xl md:text-5xl pt-20 md:py-2'>Jay Martinez</h1>
@@ -39,6 +40,7 @@ const HomePage = () => {
                             <FaLinkedin />
                             <span>LinkedIn</span>
                         </a>
+
 
                         <a href="https://github.com/jayamartinez" target="_blank" rel="noopener noreferrer" 
                         className="flex rounded-md border border-gray-400/20 
@@ -65,7 +67,7 @@ const HomePage = () => {
                     
                     <FlashlightScroll />
     
-                    <a href="/projects" rel="noopener noreferrer"
+                    {/* <a href="/projects" rel="noopener noreferrer"
                     className="mt-8 lg:mt-2 w-fit right-10 rounded-md 
                     border-[0.5px] border-gray-400/20 bg-neutral-800 px-1.5 
                     py-1 text-[#9A9A9A] text-xs flex items-center space-x-2
@@ -73,7 +75,17 @@ const HomePage = () => {
                     origin-center">
                         <span>More projects</span> { ` `}
                         <FaArrowRightLong />
-                    </a>
+                    </a> */}
+
+                    <Link to={"/projects"} 
+                    className='mt-8 lg:mt-2 w-fit right-10 rounded-md 
+                    border-[0.5px] border-gray-400/20 bg-neutral-800 px-1.5 
+                    py-1 text-[#9A9A9A] text-xs flex items-center space-x-2
+                    transition-transform duration-300 hover:scale-105
+                    origin-center'>
+                        <span>More projects</span>
+                        <FaArrowRightLong />
+                    </Link>
             
                 </div>
 
